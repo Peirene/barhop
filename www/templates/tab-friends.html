@@ -1,5 +1,8 @@
 <ion-view view-title="Friends">
   <ion-content>
+  	<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}"><p></p>
+    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+    <button class="button" ng-click="takePicture()">Take Picture</button>
     <ion-list>
       <ion-item class="item-avatar" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
         <img ng-src="{{friend.face}}">

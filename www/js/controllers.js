@@ -1,5 +1,9 @@
 angular.module('starter.controllers', [])
 
+.config(function($compileProvider){
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+})
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
@@ -13,8 +17,27 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
+.controller('FriendsCtrl', function($scope, Friends, $cordovaCamera) {
   $scope.friends = Friends.all();
+  $scope.takePicture = function() {
+        var options = { 
+            quality : 75, 
+            destinationType : Camera.DestinationType.FILE_URI, 
+            sourceType : Camera.PictureSourceType.CAMERA, 
+            allowEdit : true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 300,
+            targetHeight: 300,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false
+        };
+ 
+        $cordovaCamera.getPicture(options).then(function success (imageURI) {
+            $scope.imgURI = imageURI;
+        }, function error ( err) {
+            // An error occured. Show a message to the user
+        });
+    }
 })
 
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
