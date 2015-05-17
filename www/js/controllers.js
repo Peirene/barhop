@@ -6,6 +6,18 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
+.controller('BarCtrl', function($scope) {})
+
+.controller('WhoCtrl', function($scope) {})
+
+.controller('ScopeCtrl', function($scope) {})
+
+.controller('SmileCtrl', function($scope) {})
+
+.controller('NewfriendCtrl', function($scope) {})
+
+.controller('Newfriend2Ctrl', function($scope) {})
+
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {

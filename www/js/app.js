@@ -50,7 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     views: {
       'tab-scope': {
         templateUrl: 'templates/tab-scope.html',
-        controller: 'ChatsScope'
+        controller: 'ScopeCtrl'
       }
     }
   })
@@ -61,39 +61,40 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     controller: 'DashCtrl'
   })
 
+  .state('bar', {
+    url: '/bar',
+    templateUrl: 'templates/bar.html',
+    controller: 'BarCtrl'
+  })
+
+  .state('who', {
+    url: '/who',
+    templateUrl: 'templates/who.html',
+    controller: 'WhoCtrl'
+  })
+
+  .state('smile', {
+    url: '/smile',
+    templateUrl: 'templates/smile.html',
+    controller: 'SmileCtrl'
+  })
+
+  .state('newfriend', {
+    url: '/newfriend',
+    templateUrl: 'templates/newfriend.html',
+    controller: 'NewfriendCtrl'
+  })
+
+  .state('newfriend2', {
+    url: '/newfriend2',
+    templateUrl: 'templates/newfriend2.html',
+    controller: 'Newfriend2Ctrl'
+  })
+
   .state('friends', {
     url: '/friends',
     templateUrl: 'templates/tab-friends.html',
     controller: 'FriendsCtrl'
-  })
-
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
   });
 
   // if none of the above states are matched, use this as the fallback
