@@ -29,6 +29,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+  .state('tab', {
+    url: "/tab",
+    abstract: true,
+    templateUrl: "templates/tabs.html"
+  })
+
+  .state('tab.chats', {
+    url: '/chats',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/tab-chats.html',
+        controller: 'ChatsCtrl'
+      }
+    }
+  })
+
+  .state('tab.scope', {
+    url: '/scope',
+    views: {
+      'tab-scope': {
+        templateUrl: 'templates/tab-scope.html',
+        controller: 'ChatsScope'
+      }
+    }
+  })
+
   .state('dash', {
     url: '/dash',
     templateUrl: 'templates/tab-dash.html',
@@ -41,15 +67,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     controller: 'FriendsCtrl'
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {

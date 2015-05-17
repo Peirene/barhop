@@ -3,3 +3,45 @@
 .homepage{
 	background-color:#000033;
 }
+
+.header{
+	background-color:#000033;
+	color:white;
+}
+
+.header h3{
+	color:white;
+}
+
+.logo{
+	display: block;
+  	width: 250px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding-top: 50px;
+}
+
+.logins{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.signin{
+  width: 100px;
+  text-decoration: none;
+}
+
+.map{
+	display: block;
+  	width: 100%;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.small-logo{
+	display: block;
+  	width: 150px;
+  	margin-left: auto;
+  	margin-right: auto;	
+}
