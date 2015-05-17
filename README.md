@@ -1,4 +1,4 @@
-# barhop
+#MIXER
 
 ##What problem are we trying to solve:
 It’s tough to socialize at a crowded bar. Getting your drinks can be a nightmare, and it disrupts your focus on socializing.. Having an open tab can get costly for patrons as they focus on socializing and present risks of payment problems to bars. 
